@@ -1,0 +1,126 @@
+/* src/index.css */
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo (nom MSZ) */
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #03045e;
+}
+
+/* Conteneur des liens centré */
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Menu Desktop */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #03045e;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover {
+    color: #0077b6;
+}
+
+/* Toggle Menu (Hamburger) */
+.navbar-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #03045e;
+}
+
+/* === Responsive (Mobile) === */
+@media (max-width: 768px) {
+    /* Masquer le menu principal */
+    .navbar-menu {
+        display: none;
+    }
+
+    /* Bouton hamburger affiché */
+    .navbar-toggle {
+        display: block;
+    }
+
+    /* Menu latéral */
+    .navbar-sidebar {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Caché au départ */
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.3s ease-in-out; /* Animation fluide */
+    }
+
+    .navbar-sidebar.active {
+        right: 0; /* Fait apparaître le panneau */
+    }
+
+    .navbar-sidebar ul {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-sidebar li {
+        margin: 20px 0;
+    }
+
+    .navbar-sidebar a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #03045e;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .navbar-sidebar a:hover {
+        color: #0077b6;
+    }
+
+    /* Bouton de fermeture */
+    .close-menu {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #03045e;
+    }
+}
+@media (min-width: 769px) {
+    .navbar-sidebar {
+        display: none !important;
+    }
+}

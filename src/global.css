@@ -1,0 +1,42 @@
+/* src/global.css */
+
+/* Import de la police Comfortaa */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps du site */
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #e0e1dd; /* Fond gris clair */
+    color: #333;
+}
+
+/* Titres */
+h1, h2 {
+    color: #03045e; /* Bleu d'accentuation */
+}
+
+/* Conteneur principal */
+.section {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
